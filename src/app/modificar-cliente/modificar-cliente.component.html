@@ -1,0 +1,31 @@
+<mat-card> 
+    <div style="text-align:center;">
+        <mat-card-title>Modificar Cliente</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="usuarioNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Cedula" [value]="modClient.cedula" #txtCedula>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" [value]="modClient.nombres" #txtNombres>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" [value]="modClient.apellidos" #txtApellidos>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Direccion" [value]="modClient.direccion" #txtDireccion>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Edad" [value]="modClient.edad" #txtEdad>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="onSubmit()">Aceptar</button>  
+        <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    </form>
+    
+</mat-card>

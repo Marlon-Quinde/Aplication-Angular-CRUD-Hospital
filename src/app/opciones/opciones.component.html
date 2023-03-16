@@ -1,0 +1,117 @@
+<head>
+    <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      
+    }
+    .grid-item {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .titulo{
+      display: block;
+    }
+    svg{
+      display: block;
+      height: 200px;
+      width: 100%;
+    }
+    .inicio{
+      text-align: center;
+    }
+    </style>
+    </head>
+    
+    <body>
+    
+    <h3 class="inicio">Bienvenido, {{sesion}}</h3>
+    
+    
+    
+    <div class="grid-container">
+      <div class="grid-item"> 
+        
+        <div class="titulo">
+          Lista Doctores
+        </div> 
+        <button mat-raised-button color="Basic" (click)="cambiarDoctor()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-medical-cross" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M13 3a1 1 0 0 1 1 1v4.535l3.928 -2.267a1 1 0 0 1 1.366 .366l1 1.732a1 1 0 0 1 -.366 1.366l-3.927 2.268l3.927 2.269a1 1 0 0 1 .366 1.366l-1 1.732a1 1 0 0 1 -1.366 .366l-3.928 -2.269v4.536a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-4.536l-3.928 2.268a1 1 0 0 1 -1.366 -.366l-1 -1.732a1 1 0 0 1 .366 -1.366l3.927 -2.268l-3.927 -2.268a1 1 0 0 1 -.366 -1.366l1 -1.732a1 1 0 0 1 1.366 -.366l3.928 2.267v-4.535a1 1 0 0 1 1 -1h2z"></path>
+                
+             </svg>
+        </button>
+        
+      </div>
+      
+      <div class="grid-item">
+        <div class="titulo">
+          Agendar Cita
+        </div> 
+        <button mat-raised-button color="basic" (click)="cambiarCita()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-medical" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
+                <line x1="10" y1="14" x2="14" y2="14"></line>
+                <line x1="12" y1="12" x2="12" y2="16"></line>
+             </svg>
+        </button>
+      </div>
+      
+      <div class="grid-item">
+        
+        <div class="titulo">
+          Pacientes
+        </div> 
+        <button mat-raised-button color="basic" (click)="cambiarPaciente()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-heart" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
+                <path d="M11.993 16.75l2.747 -2.815a1.9 1.9 0 0 0 .005 -2.632a1.775 1.775 0 0 0 -2.56 -.005l-.183 .188l-.183 -.189a1.775 1.775 0 0 0 -2.56 -.004a1.899 1.899 0 0 0 -.004 2.632l2.738 2.825z"></path>
+             </svg>
+        </button>   
+
+      </div>
+     
+      <div class="grid-item">
+        <div class="titulo">
+          Historial Clinico
+        </div> 
+        <button mat-raised-button color="basic" (click)="cambiarHistorial()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-first-aid-kit" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M8 8v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+                <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                <path d="M10 14h4"></path>
+                <path d="M12 12v4"></path>
+             </svg>
+        </button>
+      </div>
+      
+      <div class="grid-item">
+        <div class="titulo">
+          Cerrar Sesion
+        </div> 
+        <button mat-raised-button color="basic" (click)="salir()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 6a7.75 7.75 0 1 0 10 0"></path>
+                <line x1="12" y1="4" x2="12" y2="12"></line>
+             </svg>
+        </button>
+      </div>
+      
+      
+    </div>
+    
+    </body>
+    
+<div class="button">
+
+    
+    
+</div>

@@ -1,0 +1,36 @@
+<mat-card> 
+    <div style="text-align:center;">
+        <mat-card-title>Modificar Cita Medica</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="citaNueva">
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Cedula" [value]="modCita.cedula" #txtCedula>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" [value]="modCita.nombres" #txtNombres>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" [value]="modCita.apellidos" #txtApellidos>
+        </mat-form-field>
+
+        
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Edad" [value]="modCita.edad" #txtEdad>
+        </mat-form-field>
+        
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Doctor" [value]="modCita.doctor" #txtNombreDoctor>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Fecha" [value]="modCita.fecha" #txtFecha>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="onSubmit()">Aceptar</button>  
+        <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    </form>
+    
+</mat-card>

@@ -1,0 +1,57 @@
+table {
+  width: 100%;
+}
+.ordernar{
+display: flex;
+margin-top: 1%;
+}
+
+.oblique{
+  text-align: center;
+  font-size: 40px;
+  margin: 50px 0;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: underline;
+  color: blue;
+}
+
+.button {
+background-color: #008CBA; /* Blue */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 13px;
+font-weight: 600;
+border-radius: 4px;
+-webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.button:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+background-color: gray;
+color: white;
+transition-duration: 0.4s;
+}
+mat-form-field{
+  width: 100%;
+  margin: 0 10%;
+}
+
+
+.ordenarBotones{
+display: flex;
+width: 100%;
+}
+
+.ordenarBotones button{
+width: 30%;
+margin: 10px 3% 20px;
+}
+
+.ordenarBotones button .color{
+color: aqua;
+}

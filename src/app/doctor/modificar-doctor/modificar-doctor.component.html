@@ -1,0 +1,32 @@
+<mat-card> 
+    <div style="text-align:center;">
+        <mat-card-title>Modificar Doctor</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="citaDoctor">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Cedula" [value]="modDoctor.cedula" #txtCedula disabled>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" [value]="modDoctor.nombres" #txtNombres>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" [value]="modDoctor.apellidos" #txtApellidos>
+        </mat-form-field>
+
+        
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Edad" [value]="modDoctor.edad" #txtEdad>
+        </mat-form-field>
+        
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Doctor" [value]="modDoctor.especialidad" #txtEspecialidad>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="onSubmit()">Aceptar</button>  
+        <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    </form>
+    
+</mat-card>

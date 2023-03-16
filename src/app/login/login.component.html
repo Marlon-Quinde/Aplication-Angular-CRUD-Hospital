@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">  
+    <div>
+        Happy-Health Medical Management Tool
+    </div>
+    
+    <span class="example-spacer"></span>
+    
+    
+  </mat-toolbar>
+  
+<div *ngIf="alert" class="alert alert-danger alert-dismissible" role="alert" data-auto-dismiss>
+    <strong>Acceso incorrecto!</strong> Verificar el usuario y/o la contraseña.
+</div>
+<mat-card>    
+    <form [formGroup]="usuarioLogin" (ngSubmit)="onSubmit()">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Usuario" formControlName="Usuario">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input type="password" matInput placeholder="Password" formControlName="Password">
+        </mat-form-field>
+
+        <button class = "button" mat-raised-button [disabled] = "!usuarioLogin.valid">Aceptar</button>
+    </form>
+</mat-card>

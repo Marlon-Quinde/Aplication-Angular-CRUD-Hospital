@@ -1,10 +1,34 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Routes,RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { AppComponent } from './app.component';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { PaginaSegundariaComponent } from './pagina-segundaria/pagina-segundaria.component';
+
+const routes:Routes = [
+  {
+    path: '',
+    component: PaginaPrincipalComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'secundaria',
+    component: PaginaSegundariaComponent
+  },
+  {
+      path: '**',
+      redirectTo: ''
+  }
+]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports:[
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,32 @@
+<mat-card> 
+    <div style="text-align:center;">
+        <mat-card-title>Modificar Historial Clinico</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="modificarHistorial">
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Cedula" [value]="modHistorial.cedula" #txtCedula>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Paciente" [value]="modHistorial.paciente" #txtPaciente>
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Diagnostico" [value]="modHistorial.diagnostico" #txtDiagnostico>
+        </mat-form-field>
+
+        
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Fecha" [value]="modHistorial.fecha" #txtFecha>
+        </mat-form-field>
+        
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Doctor" [value]="modHistorial.doctor" #txtDoctor>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="onSubmit()">Aceptar</button>  
+        <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    </form>
+    
+</mat-card>

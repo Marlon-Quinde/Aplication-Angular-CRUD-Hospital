@@ -1,0 +1,30 @@
+<mat-card> 
+    <div style="text-align:center;">
+        <mat-card-title>Registrar Nuevo Doctor</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="citaNueva">
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Cedula" formControlName="cedula">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" formControlName="nombres">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" formControlName="apellidos">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input type="number" matInput placeholder="Edad" formControlName="edad">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Especialidad" formControlName="especialidad">
+        </mat-form-field>
+        <button mat-raised-button [disabled] = "!citaNueva.valid" (click)="onSubmit()">Aceptar</button>  
+        <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    </form>
+    
+</mat-card>
